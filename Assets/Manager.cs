@@ -37,7 +37,6 @@ public class Manager : MonoBehaviour {
 
     public void DragYellowPlanet()
     {
-        Debug.Log("Test1");
         Yellowplanet.transform.position = Input.mousePosition;
     }
 
@@ -83,7 +82,6 @@ public class Manager : MonoBehaviour {
 
     public void DropYellowPlanet()
     {
-        Debug.Log("Test2");
         float Distance = Vector3.Distance(YellowplanetInitialPos, Yellowplanet.transform.position);
         if (Distance > 50)
         {
@@ -110,7 +108,7 @@ public class Manager : MonoBehaviour {
         float Distance = Vector3.Distance(BlueplanetInitialPos, Blueplanet.transform.position);
         if (Distance > 50)
         {
-            Blueplanet.transform.position = YellowstarBlack.transform.position;
+            Blueplanet.transform.position = BlueplanetInitialPos;
             source.clip = incorrect;
             source.Play();
         }
